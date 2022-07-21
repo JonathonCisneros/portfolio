@@ -5,12 +5,24 @@ import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 function Footer() {
   const footerYear = new Date().getFullYear();
 
+  const scroll2Top = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <footer className='footer p-10 text-gray-500 footer-center'>
       <div>
-        <img src={portrait} className='w-[100px]' alt='portrait' />
+        <img
+          src={portrait}
+          className='w-[40px] cursor-pointer'
+          alt='portrait'
+          onClick={scroll2Top}
+        />
 
-        <div className='inline-flex mt-0 my-6'>
+        <div className='inline-flex my-4'>
           <a
             href='https://www.linkedin.com/in/jonathoncisneros/'
             target='_blank'
@@ -29,7 +41,7 @@ function Footer() {
           </a>
         </div>
 
-        <p>
+        <p className='text-xs md:text-md'>
           Copyright &copy; {footerYear} All rights reserved. Jonathon Cisneros
         </p>
       </div>
