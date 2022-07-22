@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { CgMenuRight } from 'react-icons/cg';
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
-import portrait from '../assets/logo/portrait.png';
+import logo from '../assets/logo/portrait.png';
 
 function Navbar() {
   const scroll2Top = () => {
@@ -13,12 +13,12 @@ function Navbar() {
   };
 
   return (
-    <nav className='container mx-auto px-5 py-4 bg-base-100 fixed z-50 left-0 right-0 bg-opacity-90 backdrop-blur-lg'>
+    <nav className='mx-auto px-3 md:px-10 py-4 bg-base-100 fixed z-50 left-0 right-0 bg-opacity-80 backdrop-blur-lg'>
       <div className='flex items-center justify-between'>
         {/* My Logo */}
         <img
-          src={portrait}
-          className='w-[35px] md:w-[50px] cursor-pointer'
+          src={logo}
+          className='w-[35px] md:w-[40px] cursor-pointer'
           alt='logo'
           onClick={scroll2Top}
         />
@@ -29,7 +29,7 @@ function Navbar() {
             to='about'
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={-70}
             duration={750}
             className='btn btn-ghost'
           >
@@ -40,7 +40,7 @@ function Navbar() {
             to='projects'
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={-70}
             duration={750}
             className='btn btn-ghost'
           >
@@ -51,7 +51,7 @@ function Navbar() {
             to='contact'
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={-70}
             duration={750}
             className='btn btn-ghost'
           >
@@ -79,9 +79,9 @@ function Navbar() {
             <li className='mx-auto pt-7'>
               <Link
                 to='about'
-                spy={true}
+                spy={false}
                 smooth={true}
-                offset={-50}
+                offset={-100}
                 duration={750}
                 className='btn btn-ghost'
               >
@@ -91,9 +91,9 @@ function Navbar() {
             <li className='mx-auto'>
               <Link
                 to='projects'
-                spy={true}
+                spy={false}
                 smooth={true}
-                offset={-50}
+                offset={-100}
                 duration={750}
                 className='btn btn-ghost'
               >
@@ -103,9 +103,9 @@ function Navbar() {
             <li className='mx-auto'>
               <Link
                 to='contact'
-                spy={true}
+                spy={false}
                 smooth={true}
-                offset={-50}
+                offset={-100}
                 duration={750}
                 className='btn btn-ghost'
               >

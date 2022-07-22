@@ -1,5 +1,5 @@
 import React from 'react';
-import portrait from '../assets/logo/portrait.png';
+import logo from '../assets/logo/portrait.png';
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 
 function Footer() {
@@ -16,9 +16,9 @@ function Footer() {
     <footer className='footer p-10 text-gray-500 footer-center'>
       <div>
         <img
-          src={portrait}
+          src={logo}
           className='w-[40px] cursor-pointer'
-          alt='portrait'
+          alt='logo'
           onClick={scroll2Top}
         />
 
