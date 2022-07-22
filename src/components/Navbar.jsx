@@ -68,8 +68,8 @@ function Navbar() {
         </div>
 
         {/* Mobile nav */}
-        <div class='dropdown md:hidden'>
-          <label tabIndex='0' class='btn btn-ghost btn-circle'>
+        <div className='dropdown md:hidden'>
+          <label tabIndex='0' className='btn btn-ghost btn-circle'>
             <CgMenuRight className='text-4xl' />
           </label>
           <ul
