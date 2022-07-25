@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaGithub, FaRegPaperPlane } from 'react-icons/fa';
+import { FiGithub } from 'react-icons/fi';
+import { MdOutlineOpenInNew } from 'react-icons/md';
 
 function SingleProject({ project, index }) {
   const { title, description, mainImage, toolsUsed, githubURL, liveDemoURL } =
@@ -52,7 +53,7 @@ function SingleProject({ project, index }) {
               rel='noreferrer'
               className='text-3xl hover:text-primary mobile:text-base-100'
             >
-              <FaGithub />
+              <FiGithub />
             </a>
             <a
               href={liveDemoURL}
@@ -60,7 +61,7 @@ function SingleProject({ project, index }) {
               rel='noreferrer'
               className='text-3xl hover:text-primary mobile:text-base-100'
             >
-              <FaRegPaperPlane />
+              <MdOutlineOpenInNew />
             </a>
           </div>
         </div>
