@@ -4,9 +4,9 @@ import { FaGreaterThan } from 'react-icons/fa';
 
 function About() {
   return (
-    <div id='about' className='container mx-auto min-h-screen'>
+    <div id='about' className='container mx-auto min-h-screen mb-12 md:mb-0'>
       <div className='card mx-4 shadow-lg md:p-4'>
-        <h2 className='card-title font-serif text-3xl px-4 divider'>
+        <h2 className='card-title font-serif text-4xl px-4 mb-7 divider'>
           About Me <span className='animate-wiggle'>🤔</span>
         </h2>
 
@@ -14,7 +14,7 @@ function About() {
           <div className='hero-content flex-col lg:flex-row'>
             <img
               src={portrait}
-              className='w-[15rem] md:w-[18rem] lg:w-[20rem] mx-auto rounded-lg shadow-lg grayscale hover:grayscale-0 transition-all ease-in-out'
+              className='w-[15rem] md:w-[18rem] lg:w-[20rem] mx-auto rounded-lg shadow-lg grayscale hover:grayscale-0 mobile:grayscale-0 transition-all ease-in-out'
               alt='portrait'
             />
             <div>

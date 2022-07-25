@@ -27,14 +27,14 @@ function Projects() {
   }, []);
 
   return (
-    <div id='projects' className='container mx-auto min-h-screen'>
+    <div id='projects' className='container mx-auto min-h-screen mb-12'>
       <div className='card mx-4 shadow-lg md:p-4'>
-        <h2 className='card-title font-serif text-3xl px-4 divider'>
+        <h2 className='card-title font-serif text-4xl px-4 divider'>
           Projects 🛠
         </h2>
-        <div className='grid grid-cols-1 lg:grid-cols-2 p-4'>
+        <div className='grid grid-cols-1 lg:grid-cols-1 p-4'>
           {projectData?.map((project, index) => (
-            <SingleProject key={index} project={project} />
+            <SingleProject key={index} index={index} project={project} />
           ))}
         </div>
       </div>

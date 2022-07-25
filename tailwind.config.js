@@ -12,6 +12,11 @@ module.exports = {
           '50%': { transform: 'rotate(3deg)' },
         },
       },
+      screens: {
+        mobile: {
+          max: '1024px',
+        },
+      },
     },
     fontFamily: {
       sans: ['Roboto', 'sans serif'],

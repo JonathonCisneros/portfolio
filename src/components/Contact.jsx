@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div id='contact' className='container mx-auto'>
       <div className='card mx-4 shadow-lg md:p-4'>
-        <h2 className='card-title font-serif text-3xl px-4 divider'>
+        <h2 className='card-title font-serif text-4xl px-4 divider'>
           Contact Me 👨🏻‍💻
         </h2>
         <div className='hero py-5'>
