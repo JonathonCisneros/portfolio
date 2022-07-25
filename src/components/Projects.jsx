@@ -32,7 +32,7 @@ function Projects() {
         <h2 className='card-title font-serif text-4xl px-4 divider'>
           Projects 🛠
         </h2>
-        <div className='grid grid-cols-1 lg:grid-cols-1 p-4'>
+        <div className='grid grid-cols-1 gap-3 p-4'>
           {projectData?.map((project, index) => (
             <SingleProject key={index} index={index} project={project} />
           ))}

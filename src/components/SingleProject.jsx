@@ -9,12 +9,16 @@ function SingleProject({ project, index }) {
   const reverse = index % 2 === 0 && 'lg:flex-row-reverse'; // determine if index is odd or even to reverse flex row direction
 
   return (
-    <div className='lg:mx-2 my-5'>
+    <div className='lg:mx-2 my-2'>
       <div
-        className={`card lg:card-side ${reverse} mobile:image-full mobile:min-h-[80vw]`}
+        className={`card lg:py-4 lg:card-side ${reverse} mobile:image-full mobile:min-h-[80vw]`}
       >
         <figure>
-          <img src={imgURL} alt={title} className='w-[25rem] mx-2 rounded-lg' />
+          <img
+            src={imgURL}
+            alt={title}
+            className='w-[25rem] mx-2 rounded-lg lg:shadow-lg mobile:blur-[2px]'
+          />
         </figure>
 
         <div className='card-body p-4'>
