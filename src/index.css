@@ -7,3 +7,11 @@
   background-color: hsl(var(--p));
   color: hsl(var(--b1));
 }
+
+/* mobile project card override */
+.card.mobile\:image-full {
+  border-radius: 0.5rem !important;
+}
+.card.mobile\:image-full:before {
+  border-radius: 0.5rem !important;
+}

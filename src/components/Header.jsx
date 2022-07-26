@@ -23,13 +23,21 @@ function Header() {
             smooth={true}
             offset={-100}
             duration={750}
-            className='btn btn-primary btn-outline mt-4 mobile:mt-12'
+            className='btn btn-primary text-base-100 shadow-lg mt-4 mobile:mt-12'
           >
             Check out my work!
           </Link>
         </div>
         <div className='absolute w-full bottom-[-10rem]'>
-          <BsChevronDoubleDown className='text-xl text-primary animate-bounce mx-auto' />
+          <Link
+            to='about'
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={750}
+          >
+            <BsChevronDoubleDown className='text-3xl text-primary animate-pulse mx-auto cursor-pointer' />
+          </Link>
         </div>
       </div>
     </div>

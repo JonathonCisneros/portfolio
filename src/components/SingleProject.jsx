@@ -10,16 +10,27 @@ function SingleProject({ project, index }) {
   const reverse = index % 2 === 0 && 'lg:flex-row-reverse'; // determine if index is odd or even to reverse flex row direction
 
   return (
-    <div className='lg:mx-2 my-2'>
+    <div className='md:mx-2 my-2'>
       <div
-        className={`card lg:py-4 lg:card-side ${reverse} mobile:image-full mobile:min-h-[80vw]`}
+        className={`card md:pt-4 md:pb-8 lg:card-side ${reverse} mobile:image-full mobile:min-h-[80vw]`}
       >
         <figure>
-          <img
-            src={imgURL}
-            alt={title}
-            className='w-[25rem] mx-2 rounded-lg lg:shadow-lg mobile:blur-[2px]'
-          />
+          {/* desktop project image */}
+          <a
+            href={liveDemoURL}
+            target='_blank'
+            rel='noreferrer'
+            className='w-[25rem] mx-2 mobile:hidden'
+          >
+            <img
+              src={imgURL}
+              alt={title}
+              className='rounded-lg shadow-lg hover:shadow-xl hover:translate-y-[-1px] transition-all'
+            />
+          </a>
+
+          {/* mobile hero image */}
+          <img src={imgURL} alt={title} className='brightness-50 md:hidden' />
         </figure>
 
         <div className='card-body p-4'>
@@ -39,7 +50,7 @@ function SingleProject({ project, index }) {
           <div className='inline-flex gap-2 lg:gap-3 mobile:justify-between'>
             {toolsUsed?.map((tool, index) => (
               <div
-                className='badge badge-outline lg:text-primary mobile:text-base-100 mobile:badge-sm'
+                className='badge badge-outline text-xs lg:text-primary mobile:text-base-100 mobile:badge-sm'
                 key={index}
               >
                 {tool}

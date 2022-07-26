@@ -8,13 +8,13 @@ module.exports = {
       },
       keyframes: {
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-7deg)' },
+          '0%, 100%': { transform: 'rotate(-5deg)' },
           '50%': { transform: 'rotate(3deg)' },
         },
       },
       screens: {
         mobile: {
-          max: '1024px',
+          max: '768px',
         },
       },
     },
