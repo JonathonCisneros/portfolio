@@ -8,19 +8,20 @@ function Projects() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "project" ] | order(_createdAt asc) {
-      title,
-      description,
-      mainImage {
-        asset -> {
-          _id,
-          url
-        }
-      },
-      toolsUsed,
-      githubURL,
-      liveDemoURL
-    }`
+        `*[_type == "project" ] | order(projectRanking asc) {
+            projectRanking,
+            title,
+            description,
+            mainImage {
+              asset -> {
+                _id,
+                url
+              }
+            },
+            toolsUsed,
+            githubURL,
+            liveDemoURL
+        }`
       )
       .then((data) => setProjectData(data))
       .catch(console.error);

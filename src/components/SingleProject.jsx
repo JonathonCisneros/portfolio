@@ -3,8 +3,15 @@ import { FiGithub } from 'react-icons/fi';
 import { MdOutlineOpenInNew } from 'react-icons/md';
 
 function SingleProject({ project, index }) {
-  const { title, description, mainImage, toolsUsed, githubURL, liveDemoURL } =
-    project;
+  const {
+    projectRanking,
+    title,
+    description,
+    mainImage,
+    toolsUsed,
+    githubURL,
+    liveDemoURL,
+  } = project;
   const imgURL = mainImage.asset.url;
 
   const reverse = index % 2 === 0 && 'lg:flex-row-reverse'; // determine if index is odd or even to reverse flex row direction
@@ -17,10 +24,10 @@ function SingleProject({ project, index }) {
         <figure>
           {/* desktop project image */}
           <a
-            href={liveDemoURL}
+            href={liveDemoURL || githubURL}
             target='_blank'
             rel='noreferrer'
-            className='w-[25rem] mx-2 mobile:hidden'
+            className='w-[25rem] mx-2 cursor-pointer mobile:hidden'
           >
             <img
               src={imgURL}
@@ -35,7 +42,7 @@ function SingleProject({ project, index }) {
 
         <div className='card-body p-4'>
           <a
-            href={liveDemoURL ? liveDemoURL : githubURL}
+            href={liveDemoURL || githubURL}
             target='_blank'
             rel='noreferrer'
             className='mb-2 text-3xl md:text-4xl font-serif hover:text-primary mobile:text-base-100'
@@ -58,22 +65,27 @@ function SingleProject({ project, index }) {
             ))}
           </div>
           <div className='inline-flex gap-4 mt-5 pl-1'>
-            <a
-              href={githubURL}
-              target='_blank'
-              rel='noreferrer'
-              className='text-3xl hover:text-primary mobile:text-base-100'
-            >
-              <FiGithub />
-            </a>
-            <a
-              href={liveDemoURL}
-              target='_blank'
-              rel='noreferrer'
-              className='text-3xl hover:text-primary mobile:text-base-100'
-            >
-              <MdOutlineOpenInNew />
-            </a>
+            {githubURL && (
+              <a
+                href={githubURL}
+                target='_blank'
+                rel='noreferrer'
+                className='text-3xl hover:text-primary mobile:text-base-100'
+              >
+                <FiGithub />
+              </a>
+            )}
+
+            {liveDemoURL && (
+              <a
+                href={liveDemoURL}
+                target='_blank'
+                rel='noreferrer'
+                className='text-3xl hover:text-primary mobile:text-base-100'
+              >
+                <MdOutlineOpenInNew />
+              </a>
+            )}
           </div>
         </div>
       </div>
