@@ -8,7 +8,7 @@ function Projects() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "project"] {
+        `*[_type == "project" ] | order(_createdAt asc) {
       title,
       description,
       mainImage {
@@ -25,7 +25,7 @@ function Projects() {
       .then((data) => setProjectData(data))
       .catch(console.error);
   }, []);
-
+  console.log(projectData);
   return (
     <div id='projects' className='container mx-auto min-h-screen mb-12'>
       <div className='card mx-4 shadow-lg md:p-4'>
